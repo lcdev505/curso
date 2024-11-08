@@ -1,220 +1,178 @@
 @charset "UTF-8";
 
-/* Propriedades que se aplicam a todos os elementos da página. */
 * {
-	/* Remove a margem externa de todos os lados do elemento. */
-	margin: 0;
-
-	/* Remove o espaçamento interno de todos os lados do elemento. */
-	padding: 0;
-
-	/* Inclui o preenchimento e a borda na largura e altura. */
-	box-sizing: border-box;
-
-	font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Sans-serif;
 }
 
 body {
-	/* Exibição flexível.                          */
-	/* Torna o elemento um flex container          */
-	/* e os seus elementos internos em flex-itens. */
-	display: flex;
-
-	/* Quebra de linha quando os itens não couberem na largura da tela. */
-	flex-wrap: wrap;
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100vw;
-
-	/* Margem de todos os lados. */
-	
+    color: #333;
+    line-height: 1.6;
 }
-
-/* Formatação comum entre os elementos. */
-header, nav, main, aside, footer {
-	/* Cor do fundo. */
-	background: #ced4da;
-
-	/* Exibição flexível.                          */
-	/* Torna o elemento um flex container          */
-	/* e os seus elementos internos em flex-itens. */
-	display: flex;
-
-	/* Margem externa de todos os lados. */
-	
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100vw;
-}
-
-/* Seletores para formatação individual. */
 
 header {
-	/* Altura do elemento. */
-	height: 100px;
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header #logo {
-	/* Exibição flexível.                          */
-	/* Torna o elemento um flex container          */
-	/* e os seus elementos internos em flex-itens. */
-	display: flex;
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 0 1 200px;
-
-	/* Cor do fundo. */
-	background: #ced4da;
-
-	/* Alinha os itens na vertical. */
-	justify-content: center;
-
-	/* Alinha os itens na horizontal. */
-	align-items: center;
+header h1 {
+    margin-left: 100px;
 }
 
-#openMenu, #closeMenu {
-	/* Remove a borda. */
-	border: none;
+#logo h1 {
+    font-size: 2em;
+}
 
-	/* Remove a cor de fundo. */
-	background: none;
-
-	/* Tamanho da fonte. */
-	font-size: 30px;
-
-	/* Espessura da forte. */
-	font-weight: bold;
-
-	/* Margem ao redor do elemento              */
-	/* (superior, direito, inferior e esquerdo) */
-	padding: 0px 5px 0px 5px;
-
-	/* Muda o cursor do mouse para ponteiro.*/
-	cursor: pointer;
-
-	/* Oculta o elemento. */
+#openMenu {
 	display: none;
-
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 nav {
-	background-color: #03045e;
-	/* Alinha os itens na vertical. */
-	justify-content: center;
-
-	/* Alinha os itens na horizontal. */
-	align-items: center;
-
-	/* Altura do elemento. */
-	height: 100px;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
-	/* Margem de todos os lados. */
-	margin: 3%;
-	font-size: 15pt;
-	color: white;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+#menu {
+    
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+#menu a {
+    padding: 10px 20px;
+}
+
+#closeMenu {
+    display: none;
 }
 
 main {
-	/* Realizar a subtração de 100% da altura vertical menos a soma    */
-	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
-	height: calc(100vh - 300px);
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
+    padding: 20px;
 }
 
-aside {
-	/* Altura do elemento. */
-	height: 100px;
+.hero {
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-footer, footer a {
-	/* Altura do elemento. */
-	height: 100px;
-	background-color: #03045e;
-	color: white;
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-a {
-	/* Remove a decoração padrão do elemento. */
-	text-decoration: none;
-
-	/* Definir a cor da fonte para o padrão do elemento pai. */
-	color: inherit;
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-/* Altera o estilo dos elementos para serem apresentados */ 
-/* em telas menores que 717px. */
-@media only screen and (max-width: 717px) {
-	#openMenu, #closeMenu {
-		/* Retorna a visibilidade padrão. */
-		display: block;
-	}
+.service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
 
-	#openMenu {
-		/* Espaço a esquerda será preenchido automaticamente
-		   colocando os itens a direita. */
+.service-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+footer {
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+@media (max-width: 717px) {
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+		height: 100vh;
+        background-color: #03045e;
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+		margin: 0;
+		opacity: 0;
+		transition: 1s;
+    }
+
+    nav a {
+        font-size: 1.5em;
+    }
+
+    #menu {
+        justify-content: center;
+    }
+
+    #openMenu {
+        display: block;
 		margin-left: auto;
-	}
+    }
 
 	#closeMenu {
-		/* Torna a posição do elemento fixa. */
-		position: fixed;
-
-		/* Dispõe o elemento a 15px da esquerda. */
-		right: 15px;
-
-		/* Dispõe o elemento a 15px do topo. */
-		top: 15px;
+		display: block;
+		position: fixed	;
+		top: 20px;
+		right: 20px;
+		font-size: 2em;
+		color: white;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
+	
+    .hero h2 {
+        font-size: 2em;
+    }
 
-	nav {
-		/* Torna a posição do elemento fixa. */
-		position: fixed;
+    .services {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-		/* Dispõe os itens em coluna. */
-		flex-direction: column;
-
-		/* Ocupa 100% da largura da tela de exibição. */
-		width: 100vw;
-
-		/* Ocupa 100% da altura da tela de exibição. */
-		height: 100vh;
-
-		/* Cor em RGB, mais transparência. */
-		background: #03045e;
-
-		/* Alinha os itens na vertical. */
-		justify-content: center;
-
-		/* Alinha os itens na horizontal. */
-		align-items: center;
-
-		/* Remove a margem externa de todos os lados do elemento. */
-		margin: 0;
-
-		/* Oculta o elemento. */
-		display: none;
-
-		/* Invisivel */
-		opacity: 0;
-
-		/* Velocidade de transição de um estado para outro. */
-		transition: 0.3s;
-	}
-
-	main {
-		/* Realizar a subtração de 100% da altura vertical menos a soma    */
-		/* da altura dos elementos ( 300px ) com as suas margens ( 30px ). */
-		height: calc(100vh - 330px);
-	}
+    .service-item {
+        width: 100%;
+    }
 }
