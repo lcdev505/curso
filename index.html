@@ -1,53 +1,56 @@
-<!-- Indica que o documento é um arquivo HTML. -->
 <!DOCTYPE html>
-
-<!-- Define a linguagem do conteúdo da página. -->
 <html lang="pt-br">
-
-<!-- Armazena informações sobre a página. -->
 <head>
-
-	<!-- Conjunto de caracteres que contém acentuação e ç. -->
-	<meta charset="utf-8">
-
-	<!-- Configuração da janela de visualização ( responsividade ). -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Importação do arquivo CSS. -->
-	<link rel="stylesheet" type="text/css" href="layout.css">
-
-	<!-- Título da aba do navegador -->
-	<title>Layout 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <title>Serena Vida</title>
 </head>
-
-<!-- Conteúdo apresentado na tela. -->
 <body>
 
-	<!-- Agrupa os elementos que compõe o cabeçalho. -->
-	<header>
-		<a href="./layout.html" id="logo">Logo</a>
+    <header>
+        <div id="logo">
+            <h1>Serena Vida</h1>
+        </div>
+        <button id="openMenu">&#9776;</button>
+        <nav id="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+            <button id="closeMenu">x</button>
+        </nav>
+    </header>
 
-		<button id="openMenu">&#9776;</button>
-		<!-- Agrupa links de navegação no site. -->
-		<nav id="menu">
-			<a href="#">Home</a>
-			<a href="#">Sobre nós</a>
-			<a href="#">Produtos</a>
-			<a href="#">Contato</a>
-			<button id="closeMenu">X</button>
-		</nav>
-	</header>
+    <main>
+        <section class="hero">
+            <h2>Bem-vindo à Serena Vida</h2>
+            <p>Oferecemos cuidados especializados para idosos com amor e dedicação.</p>
+        </section>
 
-	<!-- Agrupa o conteúdo principal da página ou aplicação. -->
-	<main>Principal</main>
+        <section class="services">
+            <div class="service-item">
+                <h4>Cuidados Domiciliares</h4>
+                <p>Cuidamos de seus entes queridos no conforto do lar.</p>
+            </div>
+            <div class="service-item">
+                <h4>Acompanhamento Médico</h4>
+                <p>Acompanhamos a saúde do idoso com visitas regulares.</p>
+            </div>
+            <div class="service-item">
+                <h4>Atividades Recreativas</h4>
+                <p>Estimulamos o bem-estar físico e mental com atividades diárias.</p>
+            </div>
+        </section>
+    </main>
 
-	<!-- Agrupa informações e links relacionado ao conteúdo principal. -->
-	<aside>Links Agrupados</aside>
+    <footer>
+        <p>&copy; 2024 Serena Vida - Todos os direitos reservados.</p>
+    </footer>
 
-	<!-- Agrupa informações de autoria, direitos autorais, contato, 
-		   mapa do site, links e documento relacionados. -->
-	<footer>Rodapé</footer>
-
-	<!-- Importação do arquivo JavaScript. -->
-	<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+</html>
