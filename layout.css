@@ -8,11 +8,15 @@
 }
 
 body {
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
     color: #333;
     line-height: 1.6;
 }
 
 header {
+    position: sticky;
+    top: 0;
     background: rgb(34,34,34);
     background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
     color: white;
@@ -69,17 +73,22 @@ main {
     padding: 20px;
 }
 
-.hero {
+.initial-page {
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px 20px;
 }
 
-.hero h2 {
+.initial-page h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
+.initial-page img {
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 20px;
+}
 .services {
     display: flex;
     justify-content: space-between;
@@ -92,7 +101,7 @@ main {
 .service-item {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 30%;
 }
@@ -163,7 +172,7 @@ footer p {
 		cursor: pointer;
 	}
 	
-    .hero h2 {
+    .initial-page h2 {
         font-size: 2em;
     }
 
@@ -175,4 +184,65 @@ footer p {
     .service-item {
         width: 100%;
     }
+}
+
+aside {
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(83,83,83,1) 50%, rgba(34,34,34,1) 100%);
+    color: #333;
+}
+
+.contact {
+    margin-top: 50px;
+}
+.contact-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: auto;
+}
+
+.contact-box h1 {
+    font-size: 25px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+#tel {
+    margin-top: 11px;
+}
+
+#email {
+    width: 30%;
+}
+
+#clock {
+    margin-top: 5px;
+}
+
+.tel-contact-text {
+    margin-top: 13px;
+}
+
+.email-contact-text {
+    margin-top: 2px;
+}
+
+.clock-contact-text {
+    margin-top: 10px;
+}
+
+.about {
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
 }
