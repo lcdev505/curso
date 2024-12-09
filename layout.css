@@ -181,6 +181,46 @@ footer p {
         width: 100%;
         font-size: 14px;
     }
+
+    .contact-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .flex-container > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tel-contact img,
+    .email-contact img,
+    .comercial-hour img {
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    .tel-contact-text,
+    .email-contact-text,
+    .clock-contact-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact-box h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contact-box p {
+        font-size: 14px;
+        text-align: center;
+    }
 }
 
 aside {
